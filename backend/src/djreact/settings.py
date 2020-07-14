@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'rest_framework',
-    'articles'
+    'rest_framework',
+    'articles.apps.ArticlesConfig'
 ]
 
 MIDDLEWARE = [
@@ -127,5 +127,6 @@ REST_FRAMEWORK = {
     # or allow read-only access for unauthenticated users.
     'DEFAULT_PERMISSION_CLASSES': [
         'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+        #'rest_framework.permissions.AllowAny'
     ]
 }
