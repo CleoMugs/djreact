@@ -1,5 +1,5 @@
 import React from 'react';
-import { List, Avatar, Button } from 'antd';
+import { List, Avatar } from 'antd';
 import { Icon } from '@ant-design/compatible';
 
 const listData = [];
@@ -43,9 +43,9 @@ const Article = (props) => {
 	      <List.Item
 	        key={item.title}
 	        actions={[
-	          <IconText icon={StarOutlined} text="156" key="list-vertical-star-o" />,
-	          <IconText icon={LikeOutlined} text="156" key="list-vertical-like-o" />,
-	          <IconText icon={MessageOutlined} text="2" key="list-vertical-message" />,
+	          <IconText type="star-o" text="156" />,
+	          <IconText type="list-vertical-like-o" text="156" />,
+	          <IconText type="list-vertical-message" text="2" />,
 	        ]}
 	        extra={
 	          <img
