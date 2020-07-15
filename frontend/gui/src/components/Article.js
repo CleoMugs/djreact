@@ -31,8 +31,8 @@ const Articles = (props) => {
 	        key={item.title}
 	        actions={[
 	          <IconText type="star-o" text="156" />,
-	          <IconText type="list-vertical-like-o" text="156" />,
-	          <IconText type="list-vertical-message" text="2" />,
+	          <IconText type="like-o" text="156" />,
+	          <IconText type="message" text="2" />,
 	        ]}
 	        extra={
 	          <img
