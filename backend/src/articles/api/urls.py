@@ -1,3 +1,12 @@
+from articles.api.views import ArticleViewSet
+from rest_framework.routers import DefaultRouter
+
+router = DefaultRouter()
+router.register(r'api', ArticleViewSet, basename='articles')
+urlpatterns = router.urls
+
+
+'''
 from django.urls import path
 
 from .views import (
@@ -16,3 +25,4 @@ urlpatterns = [
 	path('<pk>/delete/', ArticleDeleteView.as_view()),
 
 ]
+'''
