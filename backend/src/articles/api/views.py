@@ -1,3 +1,4 @@
+'''
 from rest_framework.generics import (
 	ListAPIView, 
 	RetrieveAPIView,
@@ -29,4 +30,5 @@ class ArticleUpdateView(UpdateAPIView):
 class ArticleDeleteView(DestroyAPIView):
 	queryset = Article.objects.all()
 	serializer_class = ArticleSerializer
+'''
 
