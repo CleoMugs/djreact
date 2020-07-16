@@ -6,7 +6,7 @@ import { Card } from 'antd'
 class ArticleDetail extends React.Component {
 
 	state = {
-		articles: {}
+		article: {}
 	}
 
 	componentDidMount() {
@@ -22,8 +22,8 @@ class ArticleDetail extends React.Component {
 
 	render() {
 		return (
-			<Card title={this.state.article.title}>
-				<p>{this.state.article.content}</p>
+			<Card title={ this.state.article.title }>
+				<p>{ this.state.article.content }</p>
 			</Card>
 			
 		)
