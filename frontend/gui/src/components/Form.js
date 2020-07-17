@@ -21,7 +21,7 @@ class CustomForm extends React.Component {
               content: content
             })
             .then(res => console.log(res))
-            .catch(err => console.err(error));
+            .catch(err => console.err(err));
 
         case 'put':
             axios.put(`http://127.0.0.1:8000/api/${articleID}/`, {
