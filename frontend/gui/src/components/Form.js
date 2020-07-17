@@ -24,7 +24,7 @@ class CustomForm extends React.Component {
             .catch(err => console.err(error));
 
         case 'put':
-            axios.put(`http://127.0.0.1:8000/api/${articleID}`, {
+            axios.put(`http://127.0.0.1:8000/api/${articleID}/`, {
               title: title,
               content: content
             })
@@ -37,7 +37,10 @@ class CustomForm extends React.Component {
     render() {
       return (
         <div>
-            <Form onSubmit={this.handleFormSubmit}>
+            <Form onSubmit={(event) => this.handleFormSubmit(
+              event,
+              this.props.requestType,
+              this.props.articleID)}>
             <FormItem  label="Title" >
               <Input name="title" placeholder="Put a title here" />
             </FormItem>
@@ -47,7 +50,7 @@ class CustomForm extends React.Component {
             </FormItem>
 
             <FormItem>
-              <Button type="primary" htmlType="submit">Submit</Button>
+              <Button type="primary" htmlType="submit">{this.props.btnText}</Button>
             </FormItem>
             </Form>
         </div>
