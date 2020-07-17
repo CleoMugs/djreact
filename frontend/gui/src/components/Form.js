@@ -8,7 +8,7 @@ const FormItem = Form.Item;
 
 class CustomForm extends React.Component {
 
-    handleFormSubmit = (event, requestType) => {
+    handleFormSubmit = (event, requestType, articleID) => {
       event.preventDefault();
       const title = event.target.elements.title.value;
       const content = event.target.elements.content.value;
@@ -24,7 +24,7 @@ class CustomForm extends React.Component {
             .catch(err => console.err(error));
 
         case 'put':
-            axios.put('http://127.0.0.1:8000/api/', {
+            axios.put(`http://127.0.0.1:8000/api/${articleID}`, {
               title: title,
               content: content
             })
