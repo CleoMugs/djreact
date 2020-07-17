@@ -29,7 +29,7 @@ class CustomForm extends React.Component {
               content: content
             })
             .then(res => console.log(res))
-            .catch(err => console.err(error));
+            .catch(err => console.err(err));
       }
 
     }
